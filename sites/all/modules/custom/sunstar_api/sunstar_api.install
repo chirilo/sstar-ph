@@ -1,0 +1,364 @@
+<?php
+
+function sunstar_api_schema() {
+	$schema = array();
+	// add userapp table
+	$schema['userapp'] = array(
+		'description' => "userapp base table for apps.",
+		'fields' => array(
+			'userapp_id' => array(
+	'description' => "userapp id",
+	'type' => 'serial',
+        'not null' => TRUE,
+	'auto_increment' => TRUE,
+			),
+			'uid' => array(
+				'description' => 'user id',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'created' => array(
+				'description' => 'created',
+        'type' => 'int',
+	'not null' => TRUE,
+	'default' => 0,
+			),
+			'token' => array(
+				'description' => 'user token',
+	'type' => 'varchar',
+	'length' => 255,
+        'not null' => TRUE,
+	'default' => '',
+                        ),
+                        'device_id' => array(
+                                'description' => 'device id of the device',
+	'type' => 'text',
+        'not null' => TRUE,
+                        ),
+                        'device_type' => array(
+                                'description' => 'device_type',
+        'type' => 'text',
+        'not null' => TRUE,
+			),
+ 		),
+ 		'primary key' => array('userapp_id'),
+ 		'indexes' => array(
+ 			'uid' => array('uid'),
+ 			'token' => array('token'),
+
+ 		),
+	);
+	$schema['userapp_save_category'] = array(
+		'description' => "userapp save category table.",
+		'fields' => array(
+			'save_cat_id' => array(
+				'description' => "userapp save id",
+				'type' => 'serial',
+        'not null' => TRUE,
+			),
+			'uid' => array(
+				'description' => 'user id',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'tid' => array(
+				'description' => 'taxonomy term id',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'created' => array(
+				'description' => 'created',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+ 		),
+ 		'primary key' => array('save_cat_id'),
+ 		'indexes' => array(
+ 			'uid' => array('uid'),
+ 			'tid' => array('tid'),
+ 		),
+	);
+	
+	$schema['userapp_bookmark'] = array(
+		'description' => "userapp save category table.",
+		'fields' => array(
+			'bookmark_id' => array(
+				'description' => "userapp bookmark id",
+				'type' => 'serial',
+        'not null' => TRUE,
+			),
+			'uid' => array(
+				'description' => 'user id',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'tid' => array(
+				'description' => 'taxonomy term id',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'created' => array(
+				'description' => 'created',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'type' => array(
+				'description' => 'Taxonomy type',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+        'default' => "",
+			),
+ 		),
+ 		'primary key' => array('bookmark_id'),
+ 		'indexes' => array(
+ 			'uid' => array('uid'),
+ 			'tid' => array('tid'),
+ 		),
+	);
+	
+	$schema['userapp_like'] = array(
+		'description' => "userapp like.",
+		'fields' => array(
+			'like_id' => array(
+				'description' => "userapp like id",
+				'type' => 'serial',
+        'not null' => TRUE,
+			),
+			'uid' => array(
+				'description' => 'user id',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'nid' => array(
+				'description' => 'nid',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'created' => array(
+				'description' => 'created',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'type' => array(
+				'description' => 'Taxonomy type',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+        'default' => "",
+			),
+ 		),
+ 		'primary key' => array('like_id'),
+ 		'indexes' => array(
+ 			'uid' => array('uid'),
+ 			'nid' => array('nid'),
+ 		),
+	);
+	
+	$schema['userapp_share'] = array(
+		'description' => "userapp share.",
+		'fields' => array(
+			'share_id' => array(
+				'description' => "userapp share id",
+				'type' => 'serial',
+        'not null' => TRUE,
+			),
+			'uid' => array(
+				'description' => 'user id',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'nid' => array(
+				'description' => 'nid',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'created' => array(
+				'description' => 'created',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'type' => array(
+				'description' => 'Taxonomy type',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+        'default' => "",
+			),
+ 		),
+ 		'primary key' => array('share_id'),
+ 		'indexes' => array(
+ 			'uid' => array('uid'),
+ 			'nid' => array('nid'),
+ 		),
+	);
+	
+	$schema['userapp_comment'] = array(
+		'description' => "userapp comment.",
+		'fields' => array(
+			'comment_id' => array(
+				'description' => "userapp comment id",
+				'type' => 'serial',
+        'not null' => TRUE,
+			),
+			'uid' => array(
+				'description' => 'user id',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'nid' => array(
+				'description' => 'nid',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'comment' => array(
+				'type' => 'text',
+				'size' => 'big',
+				'not null' => TRUE,
+			),
+			'created' => array(
+				'description' => 'created',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+			'type' => array(
+				'description' => 'Taxonomy type',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+        'default' => "",
+			),
+			'parent' => array(
+				'description' => 'parent comment',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+ 		),
+ 		'primary key' => array('comment_id'),
+ 		'indexes' => array(
+ 			'uid' => array('uid'),
+ 			'nid' => array('nid'),
+ 		),
+	);
+	
+	// Tally position
+	$schema['userapp_tally_position'] = array(
+		'description' => "tally position.",
+		'fields' => array(
+			'position_id' => array(
+				'description' => "tally position id",
+				'type' => 'serial',
+        'not null' => TRUE,
+			),
+			'position' => array(
+				'description' => 'Taxonomy type',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => "",
+			),
+ 		),
+ 		'primary key' => array('position_id'),
+	);
+	// Tally Candidate
+	$schema['userapp_tally_candidate'] = array(
+		'description' => "tally position.",
+		'fields' => array(
+			'candidate_id' => array(
+				'description' => "tally candidate id",
+				'type' => 'serial',
+        'not null' => TRUE,
+			),
+			'name' => array(
+				'description' => 'candidate name',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => "",
+			),
+			'position_id' => array(
+				'description' => 'position id',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+			),
+ 		),
+ 		'primary key' => array('position_id'),
+	);
+	return $schema;
+}
+
+function sunstar_api_install() {
+  $fields = array(
+    'firstname' => array('title' => 'First Name', 'type' => 'text', 'wtype' => 'textfield',),
+    'lastname' => array('title' => 'Last Name', 'type' => 'text', 'wtype' => 'textfield',),
+    'birthdate' => array('title' => 'Birthdate', 'type' => 'datestamp', 'wtype' => 'textfield',),
+    'gender' => array('title' => 'Gender', 'type' => 'list_text', 'wtype' => 'options_select','settings' => array('allowed_values' => array(0 => 'Female', 1 => 'Male', 2 => 'Other'))),
+  );
+  foreach($fields as $fieldname => $field) {
+    // Check if our field is not already created.
+    if (!field_info_field("field_$fieldname")) {
+      // Create the field base.
+      $_field = array(
+        'field_name' => "field_$fieldname", 
+        'type' => $field['type'], 
+      );
+      if(isset($field['settings'])) {
+				$_field['settings']['allowed_values'] = $field['settings']['allowed_values'];
+			}
+      field_create_field($_field);
+
+      // Create the field instance on the bundle.
+      $instance = array(
+        'field_name' => "field_$fieldname", 
+        'entity_type' => 'user', 
+        'label' => $field['title'], 
+        'bundle' => 'user', 
+        // If you don't set the "required" property then the field wont be required by default.
+        'required' => TRUE,
+        'settings' => array(
+        // Here you inform either or not you want this field showing up on the registration form.
+        'user_register_form' => 0,
+        ),
+        'widget' => array(
+          'type' => $field['wtype'],
+        ), 
+      );
+      field_create_instance($instance);
+    }
+  }
+  // add new userapp role
+  $role = new stdClass();
+	$role->name = 'userapp';
+	user_role_save($role);
+	
+  $userapp = user_role_load_by_name('userapp'); 
+	$userapp_rid = $userapp->rid;
+	// Define our 'userapp' role permissions
+	$userapp_permissions = array(
+	  'use text format filtered_html' => TRUE, 
+	  'view media' => TRUE, 
+	  'access content' => TRUE, 
+	  'access user profiles' => TRUE, 
+	);
+	// Grant permissions to our 'userapp' role
+	user_role_change_permissions($userapp_rid, $userapp_permissions);
+}
+

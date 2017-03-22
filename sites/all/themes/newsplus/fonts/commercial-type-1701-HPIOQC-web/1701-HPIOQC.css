@@ -1,0 +1,126 @@
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2017 Schwartzco Inc.
+        License: 1701-HPIOQC     
+*/
+
+
+@font-face {
+  font-family: 'Publico Text Web';
+  src: url('PublicoText-BoldItalic-Web.eot');
+  src: url('PublicoText-BoldItalic-Web.eot?#iefix') format('embedded-opentype'),
+       url('PublicoText-BoldItalic-Web.woff2') format('woff2'),
+       url('PublicoText-BoldItalic-Web.woff') format('woff');
+  font-weight:  700;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+.PublicoText-BoldItalic-Web {
+  font-family: 'Publico Text Web';
+  font-weight:  700;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Publico Text Web';
+  src: url('PublicoText-Bold-Web.eot');
+  src: url('PublicoText-Bold-Web.eot?#iefix') format('embedded-opentype'),
+       url('PublicoText-Bold-Web.woff2') format('woff2'),
+       url('PublicoText-Bold-Web.woff') format('woff');
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.PublicoText-Bold-Web {
+  font-family: 'Publico Text Web';
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Publico Text Web';
+  src: url('PublicoText-SemiboldItalic-Web.eot');
+  src: url('PublicoText-SemiboldItalic-Web.eot?#iefix') format('embedded-opentype'),
+       url('PublicoText-SemiboldItalic-Web.woff2') format('woff2'),
+       url('PublicoText-SemiboldItalic-Web.woff') format('woff');
+  font-weight:  600;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+.PublicoText-SemiboldItalic-Web {
+  font-family: 'Publico Text Web';
+  font-weight:  600;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Publico Text Web';
+  src: url('PublicoText-Semibold-Web.eot');
+  src: url('PublicoText-Semibold-Web.eot?#iefix') format('embedded-opentype'),
+       url('PublicoText-Semibold-Web.woff2') format('woff2'),
+       url('PublicoText-Semibold-Web.woff') format('woff');
+  font-weight:  600;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.PublicoText-Semibold-Web {
+  font-family: 'Publico Text Web';
+  font-weight:  600;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Publico Text Web';
+  src: url('PublicoText-Italic-Web.eot');
+  src: url('PublicoText-Italic-Web.eot?#iefix') format('embedded-opentype'),
+       url('PublicoText-Italic-Web.woff2') format('woff2'),
+       url('PublicoText-Italic-Web.woff') format('woff');
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+.PublicoText-Italic-Web {
+  font-family: 'Publico Text Web';
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Publico Text Web';
+  src: url('PublicoText-Roman-Web.eot');
+  src: url('PublicoText-Roman-Web.eot?#iefix') format('embedded-opentype'),
+       url('PublicoText-Roman-Web.woff2') format('woff2'),
+       url('PublicoText-Roman-Web.woff') format('woff');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.PublicoText-Roman-Web {
+  font-family: 'Publico Text Web';
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+

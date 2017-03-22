@@ -1,0 +1,180 @@
+<?php
+
+/**
+ * Created by Stephen Wenceslao
+ * 20 October 2015
+ */
+
+/**
+ * Implement Hook menu
+ */
+function sunstar_api_menu() {
+  $items = array();
+  
+  $items['api/register'] = array(
+    'page callback' => 'sunstar_api_register',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  $items['api/login'] = array(
+    'page callback' => 'sunstar_api_login',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  $items['api/login/%'] = array(
+    'page callback' => 'sunstar_api_social_login',
+    'page arguments' => array(2),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  $items['api/logout/%'] = array(
+    'page callback' => 'sunstar_api_logout',
+    'page arguments' => array(2),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  // all categories
+  $items['api/categories/%'] = array(
+    'page callback' => 'sunstar_api_all_categories',
+    'page arguments' => array(2),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  // save user categories 
+  $items['api/categories/save/%'] = array(
+    'page callback' => 'sunstar_api_save_categories',
+    'page arguments' => array(3),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  // retrieve user categories
+  $items['api/categories/me/%'] = array(
+    'page callback' => 'sunstar_api_retrieve_categories',
+    'page arguments' => array(3),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  // API to retrieve news feeds based on categories selected 
+  $items['api/feed/news/%'] = array(
+    'page callback' => 'sunstar_api_feeds_by_categories',
+    'page arguments' => array(3),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  // API to retrieve services feeds
+  $items['api/feed/services/%/%'] = array(
+    'page callback' => 'sunstar_api_feeds_by_services',
+    'page arguments' => array(3, 4),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  // retrieve birthdays
+  $items['api/feed/birthdays/%'] = array(
+    'page callback' => 'sunstar_api_retrieved_birthdays',
+    'page arguments' => array(3),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  // retrieved user information
+  $items['api/user/me/%'] = array(
+    'page callback' => 'sunstar_api_retrieved_user_info',
+    'page arguments' => array(3),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  // API Bookmark save
+  $items['api/bookmark/%/%'] = array(
+    'page callback' => 'sunstar_api_bookmark',
+    'page arguments' => array(2, 3),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  // API Bookmark retrieved
+  $items['api/bookmark/%/me/%'] = array(
+    'page callback' => 'sunstar_api_get_bookmark',
+    'page arguments' => array(2, 4),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  // API LIKE
+  $items['api/like/%/%'] = array(
+    'page callback' => 'sunstar_api_like',
+    'page arguments' => array(2, 3),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  // API Share
+  $items['api/share/%/%'] = array(
+    'page callback' => 'sunstar_api_share',
+    'page arguments' => array(2, 3),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  // API comment /comment/news/{token}?q={news_id}
+  $items['api/comment/%/%'] = array(
+    'page callback' => 'sunstar_api_comment',
+    'page arguments' => array(2,3),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+  // API search
+  $items['api/search/%'] = array(
+    'page callback' => 'sunstar_api_search',
+    'page arguments' => array(2),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+    'file' => 'sunstar_api.inc',
+  );
+ // update user information
+   $items['api/user/me/update/%'] = array(
+   'page callback' => 'sunstar_api_userapp_update',
+   'page arguments' => array(4),
+   'access callback' => TRUE,
+   'type' => MENU_CALLBACK,
+   'file' => 'sunstar_api.inc',
+   );
+
+ // update user privacy
+   $items['api/user/me/privacy/%'] = array(
+   'page callback' => 'sunstar_api_userapp_privacy',
+   'page arguments' => array(4),
+   'access callback' => TRUE,
+   'type' => MENU_CALLBACK,
+   'file' => 'sunstar_api.inc',
+   );
+
+// update avatar
+   $items['api/upload/avatar/%'] = array(
+   'page callback' => 'sunstar_api_userapp_avatar',
+   'page arguments' => array(3),
+   'access callback' => TRUE,
+   'type' => MENU_CALLBACK,
+   'file' => 'sunstar_api.inc',
+   );
+
+//Update or reset  password	
+   $items['api/password/forgot'] = array(
+   'page callback' => 'sunstar_api_forgot',
+   'access callback' => TRUE,
+   'type' => MENU_CALLBACK,
+   'file' => 'sunstar_api.inc',
+   );	
+
+  return $items;
+}

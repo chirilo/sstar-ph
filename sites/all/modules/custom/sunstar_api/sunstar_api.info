@@ -1,0 +1,6 @@
+name = Sunstar API
+description = Sunstar API
+core = 7.x
+package = Sun.Star
+
+version = "1.0"

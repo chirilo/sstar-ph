@@ -1,0 +1,68 @@
+/**
+*
+* Font Faces
+* @Tungsten
+*
+**/
+@font-face {
+    font-family: 'Tungsten-Medium'; /* Main Menu */
+    font-weight: 400;
+    src: url("http://www.sunstar.com.ph/sites/all/themes/newsplus/fonts/https/new/HCo_Tungsten_Complete/OpenTypeTungsten-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Tungsten-Semibold'; /* Affiliates Menu */
+    font-weight: 600; /*semibold*/
+    src: url("http://www.sunstar.com.ph/sites/all/themes/newsplus/fonts/https/new/HCo_Tungsten_Complete/OpenType/Tungsten-Semibold.otf") format("opentype");
+}
+/**
+* EOF Font Faces
+*/
+
+
+
+
+/**
+* navbar-menu
+*/
+nav.navbar.bootsnav ul.nav > li > a{
+    font-family: 'Tungsten-Semibold', sans-serif;
+    font-size: 24px;
+    font-weight: medium;
+    color: #98C1E0; /* default color of Affiliate Menus */
+}
+
+/*#block-superfish-2 ul#superfish-2 > li > a{
+    font-family: 'Tungsten-Semibold' !important;
+    font-size: 18px;
+    font-weight: medium;
+    color: #98C1E0; /* default color of Affiliate Menus */
+}*/
+
+#navbar-menu ul li a:hover,
+#navbar-menu ul li a:active,
+#navbar-menu ul li a:focus{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/**
+* navbar-menu-2
+*/
+#navbar-menu-2 ul.nav > li > a {
+    /*padding: 15px 10px !important;*/
+    padding: 15px 0px 15px 0px !important;
+    font-size: 18px;
+}
+
+#navbar-menu-2 ul.nav > li > a > span {
+    padding: 0px 10px;
+}
+
+
+#navbar-menu-2 ul li a:hover,
+#navbar-menu-2 ul li a:active,
+#navbar-menu-2 ul li a:focus{
+    color: #FFFFFF;
+    text-decoration: none;
+}
