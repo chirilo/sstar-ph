@@ -474,8 +474,74 @@ h2.slide__title a {
 * Featured Videos Slick Slide - Chirilo March 21, 2017
 */
 #slick-views-Video-1-slider .slick-list{
-  margin-top: 25px !important;
+  margin-top: -20px !important;
 }
 #slick-views-Video-1-slider .slick-slide {
-  height: 200px !important;
+  /*height: 200px !important;*/
+}
+
+#quicktabs-featured_videos li {
+  min-width: 100%;
+  width: 100.7%;
+}
+
+#quicktabs-latest_news_qt li {
+  min-width: 100%;
+  width: 100.7%;
+}
+
+#quicktabs-custom_channel_qt li {
+  min-width: 100%;
+  width: 100.75%;
+}
+
+#quicktabs-custom_channel_qt a {
+
+}
+
+#quicktabs-tab-latest_news_qt-0,
+#quicktabs-tab-custom_channel_qt-0,
+#quicktabs-tab-featured_videos-0 {
+  z-index: 99;
+}
+
+
+#slick-views-Video-1-slider .slick-dots {
+  display: none !important;
+}
+
+.feature-vid i.fa-play-circle-o:before {
+  content: url('http://www.sunstar.com.ph/sites/all/themes/newsplus/bootsnav/images/video_icon.png') !important;
+  height: 50px;
+  width: 50px;
+  opacity: 0.6;
+}
+.feature-vid i.fa-play-circle-o:hover {
+  opacity: 1;
+  background-color: transparent !important;
+}
+
+.feature-vid i.fa-play-circle-o {
+  top: 30%;
+  left: 37%;
+}
+
+.slick-prev, .slick-next {
+  display: none !important;
+}
+
+@media (min-width: 320px) and (max-width: 736px) {
+  #quicktabs-tab-latest_news_qt-0,
+  #quicktabs-tab-custom_channel_qt-0,
+  #quicktabs-tab-featured_videos-0 {
+    margin-bottom: -35px !important;
+  }
+
+  .item-list ul.quicktabs-tabs > li.active > a:after {
+    bottom: -17px !important;
+  }
+}
+
+.feature-vid:hover > .fa-play-circle-o {
+  background: transparent !important;
 }
